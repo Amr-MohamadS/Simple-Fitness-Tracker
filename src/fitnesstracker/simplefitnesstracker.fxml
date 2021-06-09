@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnesstracker.Controller">
+   <children>
+      <Label layoutX="223.0" layoutY="28.0" text="Choose an activity">
+         <font>
+            <Font name="Cambria" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="187.0" layoutY="137.0" prefHeight="24.0" prefWidth="250.0" text="Enter time taken to practice  ">
+         <font>
+            <Font name="Cambria" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textfield" layoutX="227.0" layoutY="177.0" />
+      <SplitMenuButton fx:id="Activities" layoutX="257.0" layoutY="75.0" mnemonicParsing="false" text="Activities">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#setKickBoxing" text="Kick Boxing" />
+          <MenuItem mnemonicParsing="false" onAction="#setSwimming" text="Swimming" />
+            <MenuItem mnemonicParsing="false" onAction="#setRunning" text="Running" />
+            <MenuItem mnemonicParsing="false" onAction="#setStrengthTraining" text="Strength Training" />
+        </items>
+      </SplitMenuButton>
+      <Label layoutX="195.0" layoutY="301.0" text="Calories Burnt" />
+      <Label fx:id="calories" layoutX="334.0" layoutY="301.0" prefHeight="17.0" prefWidth="197.0" text="0 Calorie" />
+      <Label layoutX="195.0" layoutY="344.0" text="Heart Rate" />
+      <Label fx:id="HR" layoutX="335.0" layoutY="344.0" prefHeight="17.0" prefWidth="197.0" text="80 Calorie" />
+      <Button layoutX="202.0" layoutY="401.0" mnemonicParsing="false" onAction="#setRanking" text="Activities Ranking" />
+      <Button layoutX="337.0" layoutY="401.0" mnemonicParsing="false" onAction="#setResults" text="Results" />
+      <Button layoutX="272.0" layoutY="219.0" mnemonicParsing="false" onAction="#calculate" text="Confirm" />
+      <Label fx:id="activity1" layoutX="256.0" layoutY="111.0" text="No Activity chosen" />
+      <Label fx:id="done" layoutX="231.0" layoutY="257.0" prefHeight="17.0" prefWidth="149.0" />
+   </children>
+</AnchorPane>
